@@ -1,3 +1,7 @@
+# What is this?
+
+This is a demo for Open OnDemand. Forked it b/c the original demo doesn't seem to work anymore, and I'd like to mess with it.
+
 # Setup
 
     git clone https://github.com/OSC/ood-images-full.git
