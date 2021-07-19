@@ -5,6 +5,7 @@ Vagrant.configure(2) do |config|
   config.vm.box = "centos/7"
   config.vm.synced_folder ".", "/vagrant", type: "virtualbox"
   config.vm.synced_folder "./ood-home", "/home/ood", type: "virtualbox", mount_options: ["uid=1001","gid=1001"]
+  config.vbguest.installer_options = { allow_kernel_upgrade: true }
 
   config.vm.define "ood", primary: true, autostart: true do |ood|
     ood.vm.network "forwarded_port", guest: 80, host: 8080
