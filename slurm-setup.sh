@@ -1,11 +1,11 @@
 #!/bin/bash
 
-SLURM_VERSION=18.08.3
+SLURM_VERSION=20.11.8
 set -x
 
 # Install munge
 yum -y install epel-release
-yum -y install munge munge-devel
+yum -y install munge munge-devel python3
 install -o munge -g munge -m 0600 /vagrant/munge.key /etc/munge/munge.key
 systemctl enable munge
 systemctl start munge
